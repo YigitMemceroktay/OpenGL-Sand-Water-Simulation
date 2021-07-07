@@ -86,6 +86,7 @@ namespace Engine
 	}
 	void Shader::SetFloat4(const char* name, glm::vec4 val)
 	{
+		glUniform4fv(glGetUniformLocation(program, name), 1, glm::value_ptr(val));
 	}
 	void Shader::SetInt1(const char* name, int val)
 	{
